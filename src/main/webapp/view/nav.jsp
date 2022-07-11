@@ -11,7 +11,7 @@
 				<li class="nav-item"><a class="nav-link"
 					aria-current="page" href="${pageContext.request.contextPath}/">Home</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/estudiante">Estudiantes</a>
+					href="${pageContext.request.contextPath}/estudiante?op=list">Estudiantes</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/becas">Becas</a></li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/facilitadores">Facilitadores</a></li>
