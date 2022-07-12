@@ -11,7 +11,6 @@
 		<header>
 			<%@ include file="nav.jsp"%>
 			<h3>Listado de Estudiantes</h3>
-			<h4>Hola <c:out value="${nombre}"></c:out> <c:out value="${apellido}"></c:out>
 			</h4>
 		</header>
 		<main>
@@ -29,8 +28,16 @@
 						<th>Rut</th>
 						<th>Nacimiento</th>
 						<th>Ingresos</th>
+						<th>Acción</th>
 					</tr>
 				</thead>
+				
+				<%
+
+					System.out.println("Holanda que talca... ");
+				
+				%>
+				
 				<tbody>
 					<c:forEach var="estudiante" items="${estudiantes}">
 						<tr>
@@ -44,6 +51,11 @@
 							<td><fmt:formatNumber type="currency" currencySymbol="$"
 									maxFractionDigits="0" groupingUsed="true"
 									value="${estudiante.getIngresos()}"></fmt:formatNumber></td>
+							<td><a
+								href="${pageContext.request.contextPath}/estudiante?op=edit&id=${estudiante.getId()}"><i
+									class="fa-solid fa-pen-to-square"></i></a> | <a
+								href="${pageContext.request.contextPath}/estudiante?op=del&id=${estudiante.getId()}"><i
+									class="fa-solid fa-trash"></i></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

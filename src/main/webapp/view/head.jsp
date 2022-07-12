@@ -13,4 +13,6 @@
 		<%@include file="/static/css/estilo.css" %>
 	</style>
 	
+	<script src="https://kit.fontawesome.com/81a2ed02b0.js" crossorigin="anonymous"></script>
+	
 </head>

@@ -22,6 +22,21 @@ public class EstudianteService {
 		return estudiantes;
 	}
 	
+	public Estudiante getEstudiante(int id) {
+		Estudiante encontrado = null;
+		
+		for (Estudiante estudiante : estudiantes) {
+			if (estudiante.getId() == id){
+				encontrado = estudiante;
+			}
+		}
+		
+		return encontrado;
+	}
+	
+	public void setEstudiantes(List<Estudiante> estudiantes) {
+		this.estudiantes = estudiantes;
+	}
 	
 	private void llenaEstudiantes() {
 		

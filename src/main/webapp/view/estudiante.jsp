@@ -10,33 +10,41 @@
 	<div class="container">
 		<header>
 			<%@ include file="nav.jsp"%>
-			<h3>Crear Estudiante</h3>
+			<c:if test="${op == 'new'}">
+				<h3>Crear Estudiante</h3>
+			</c:if>
+			<c:if test="${op == 'edit'}">
+				<h3>Editar Estudiante</h3>
+			</c:if>
+			
 		</header>
 		<main>
-
-
-			<form action="${pageContext.request.contextPath}/estudiante?op=new" method="post" class="form">
+			
+				<form action="${pageContext.request.contextPath}/estudiante?op=${op}" method="post" class="form">
+			
+				<input type="hidden" id="id" name="id" value="${estudiante.getId()}">
+			
 				<div class="mb-3">
 					<label for="nombre" class="form-label">Nombre</label> 
 					<input type="text" class="form-control" id="nombre" name="nombre"  
-						placeholder="Rigoberta">
+						placeholder="Rigoberta" value="${estudiante.getNombre()}">
 				</div>
 				<div class="mb-3">
 					<label for="apellido" class="form-label">Apellido</label> <input
 						type="text" class="form-control" id="apellido" name="apellido"
-						placeholder="Manchú">
+						placeholder="Manchú" value="${estudiante.getApellido()}">
 				</div>
 				<div class="mb-3">
 					<label for="rut" class="form-label">Rut</label> <input type="text"
-						class="form-control" id="rut" name="rut" placeholder="11111111-1">
+						class="form-control" id="rut" name="rut" placeholder="11111111-1" value="${estudiante.getRut()}">
 				</div>
 				<div class="mb-3">
 					<label for="nacimiento" class="form-label">Nacimiento</label> <input
-						type="date" class="form-control" id="nacimiento" name="nacimiento">
+						type="date" class="form-control" id="nacimiento" name="nacimiento" value="${estudiante.getNacimiento()}">
 				</div>
 				<div class="mb-3">
 					<label for="ingresos" class="form-label">Ingresos</label> <input
-						type="number" class="form-control" id="ingresos" name="ingresos">
+						type="number" class="form-control" id="ingresos" name="ingresos" value="${estudiante.getIngresos()}">
 				</div>
 				<div class="mb-3">
 					<div>
