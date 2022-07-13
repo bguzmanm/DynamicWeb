@@ -14,7 +14,7 @@
 					href="${pageContext.request.contextPath}/estudiante?op=list">Estudiantes</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/becas">Becas</a></li>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/facilitadores">Facilitadores</a></li>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/films">Películas</a></li>
 			</ul>
 		</div>
 	</div>
