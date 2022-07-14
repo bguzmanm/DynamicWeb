@@ -19,4 +19,25 @@ public class FilmServiceImpl implements FilmService{
 		
 	}
 
+	@Override
+	public Film read(int film_id) {
+		return dao.read(film_id);
+	}
+
+	@Override
+	public void update(Film film) {
+		dao.update(film);
+	}
+
+	@Override
+	public void create(Film f) {
+		dao.create(f);
+		
+	}
+
+	@Override
+	public void delete(int film_id) {
+		dao.delete(film_id);
+	}
+
 }

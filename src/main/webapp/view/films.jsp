@@ -42,9 +42,9 @@
 							<td><c:out value="${f.getSpecial_features()}"></c:out></td>
 							
 							<td><a
-								href="${pageContext.request.contextPath}/estudiante?op=edit&id=${f.getFilm_id()}"><i
+								href="${pageContext.request.contextPath}/films?op=edit&id=${f.getFilm_id()}"><i
 									class="fa-solid fa-pen-to-square"></i></a> | <a
-								href="${pageContext.request.contextPath}/estudiante?op=del&id=${f.getFilm_id()}"><i
+								href="${pageContext.request.contextPath}/films?op=del&id=${f.getFilm_id()}"><i
 									class="fa-solid fa-trash"></i></a></td>
 						</tr>
 					</c:forEach>
